@@ -5,7 +5,6 @@ define([
     'use strict';
 
     return Marionette.ItemView.extend({
-        tagName: 'li',
-        template: templates.hook
+        template: templates.plain
     });
 });

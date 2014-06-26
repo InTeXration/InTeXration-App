@@ -1,13 +1,13 @@
 define([
-    'app'
-], function (app) {
+    'app',
+    'views/Plain'
+], function (app, Plain) {
     'use strict';
 
     return{
-        document: function(owner, repo, name){
-            console.log(owner);
-            console.log(repo);
-            console.log(name);
+        plain: function(){
+            var plain = new Plain();
+            app.main.show(plain);
         }
     };
 });

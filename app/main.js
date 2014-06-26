@@ -4,6 +4,7 @@ require.config({
         backbone: '../bower_components/backbone/backbone',
         marionette: '../bower_components/backbone.marionette/lib/backbone.marionette',
         jquery: '../bower_components/jquery/dist/jquery',
+        handlebars: '../bower_components/handlebars/handlebars.runtime',
         tpl: 'lib/tpl'
     },
 

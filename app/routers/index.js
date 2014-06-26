@@ -5,8 +5,7 @@ define([
 
     return Marionette.AppRouter.extend({
         appRoutes: {
-            ":owner/:repo/:document": "document"
-
+            "plain": "plain",
         }
     });
 });
