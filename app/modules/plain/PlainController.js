@@ -1,7 +1,7 @@
 define([
     'app',
-    '../modules/plain/PlainView'
-], function (app, Plain) {
+    'modules/plain/PlainView'
+], function (app, PlainView) {
     'use strict';
 
     return{

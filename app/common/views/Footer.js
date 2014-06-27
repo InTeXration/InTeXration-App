@@ -1,6 +1,6 @@
 define([
     'marionette',
-    'templates',
+    '../../templates',
 ], function (Marionette, templates) {
     'use strict';
 

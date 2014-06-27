@@ -1,7 +1,7 @@
 define([
     'marionette',
-    'templates',
-    'views/HookItem'
+    '../../templates',
+    'modules/hook/HookItemView'
 ], function (Marionette, templates, ItemView) {
     'use strict';
 
