@@ -6,6 +6,6 @@ define([
 
     return Backbone.Collection.extend({
         model: Model,
-        url: 'http://intexration.com/hook'
+        url: 'http://intexration.com/plain'
     });
 });

@@ -1,12 +1,12 @@
 define([
     'app',
-    'views/Plain'
+    '../modules/plain/PlainView'
 ], function (app, Plain) {
     'use strict';
 
     return{
         plain: function(){
-            var plain = new Plain();
+            var plain = new PlainView();
             app.main.show(plain);
         }
     };
