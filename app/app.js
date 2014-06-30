@@ -1,9 +1,9 @@
 define([
     'marionette',
-    'common/AppRouter',
     'common/views/Header',
-    'common/views/Footer'
-], function (Marionette, AppRouter, Header, Footer) {
+    'common/views/Footer',
+    'nprogress'
+], function (Marionette, Header, Footer, NProgress) {
     'use strict';
 
     var app = new Marionette.Application();
@@ -18,30 +18,20 @@ define([
     });
 
     app.addInitializer(function (){
+        NProgress.start();
         app.header.show(header);
         app.footer.show(footer);
         require([
+            'common/AppRouter',
             "modules/plain/PlainApp",
             "modules/hook/HookApp"
-        ], function(){
+        ], function(AppRouter){
             new AppRouter();
             Backbone.history.start({pushState: true,  root: '/'})
+            NProgress.done();
         });
     });
 
-    app.startSubApp = function(appName, args){
-        var currentApp = appName ? app.module(appName) : null;
-        if (app.currentApp === currentApp){ return; }
-
-        if (app.currentApp){
-            app.currentApp.stop();
-        }
-
-        app.currentApp = currentApp;
-        if(currentApp){
-            currentApp.start(args);
-        }
-    };
 
 
     return window.app = app;
