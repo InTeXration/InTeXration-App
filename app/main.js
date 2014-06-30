@@ -31,16 +31,19 @@ require.config({
 require([
     'app',
     'backbone',
-], function (app, Backbone) {
+    'nprogress'
+], function (app, Backbone,NProgress) {
     'use strict';
 
     $(document).on("click", "a:not([data-bypass])", function(evt) {
+        NProgress.start();
         var href = { prop: $(this).prop("href"), attr: $(this).attr("href") };
         var root = location.protocol + "//" + location.host + '/';
 
         if (href.prop && href.prop.slice(0, root.length) === root) {
             evt.preventDefault();
             Backbone.history.navigate(href.attr, true);
+            NProgress.done();
         }
     });
 

@@ -27,7 +27,7 @@ define([
             "modules/hook/HookApp"
         ], function(AppRouter){
             new AppRouter();
-            Backbone.history.start({pushState: true,  root: '/'})
+            Backbone.history.start({pushState: true,  root: '/'});
             NProgress.done();
         });
     });
