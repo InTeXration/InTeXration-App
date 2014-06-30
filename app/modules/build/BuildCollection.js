@@ -1,11 +1,11 @@
 define([
     'backbone',
-    'BuildModel',
-], function (Backbone, Model) {
+    'modules/build/BuildModel'
+], function (Backbone, BuildModel) {
     'use strict';
 
     return Backbone.Collection.extend({
-        model: Model,
+        model: BuildModel,
         url: 'http://intexration.com/build',
         initialize: function(){
             this.fetch();

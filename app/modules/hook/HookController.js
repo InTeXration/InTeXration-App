@@ -1,6 +1,6 @@
 define([
     'app',
-    'modules/hook/HookView',
+    'modules/hook/views/HookView',
     'modules/hook/HookCollection'
 ], function (app, HookView, HookCollection) {
     'use strict';

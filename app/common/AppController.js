@@ -1,12 +1,11 @@
 define([
-    'app',
-    '../modules/plain/PlainView'
-], function (app, Plain) {
+    'app'
+], function (app) {
     'use strict';
 
     return{
-        test: function(){
-            console.log('test');
+        index: function(){
+            app.main.reset();
         }
     };
 });

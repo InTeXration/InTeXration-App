@@ -7,7 +7,7 @@ define([
     return Marionette.AppRouter.extend({
         controller: AppController,
         appRoutes: {
-            "test": "test"
+            "": "index"
         }
     });
 });

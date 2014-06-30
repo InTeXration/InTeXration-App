@@ -7,7 +7,7 @@ define([
         idAttribute: "_id",
 
         urlRoot: function() {
-            return '/plain';
+            return '/hook';
         }
     });
 });

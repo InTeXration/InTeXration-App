@@ -23,8 +23,8 @@ define([
         app.footer.show(footer);
         require([
             'common/AppRouter',
-            "modules/plain/PlainApp",
-            "modules/hook/HookApp"
+            'modules/hook/HookApp',
+            'modules/build/BuildApp'
         ], function(AppRouter){
             new AppRouter();
             Backbone.history.start({pushState: true,  root: '/'});
