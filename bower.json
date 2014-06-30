@@ -11,7 +11,8 @@
     "modernizr": "~2.7.1",
     "underscore": "*",
     "foundation": "*",
-    "nprogress": "*"
+    "nprogress": "*",
+    "bootstrap": "*"
   },
   "devDependencies": {}
 }
