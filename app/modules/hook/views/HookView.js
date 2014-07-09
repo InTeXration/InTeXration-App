@@ -1,6 +1,6 @@
 define([
     'marionette',
-    'tpl!modules/hook/templates/hook.tmpl',
+    'tpl!modules/hook/templates/hook.html',
     'modules/hook/views/HookItemView'
 ], function (Marionette, template, ItemView) {
     'use strict';

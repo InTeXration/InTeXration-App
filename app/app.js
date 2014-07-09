@@ -32,7 +32,5 @@ define([
         });
     });
 
-
-
     return window.app = app;
 });

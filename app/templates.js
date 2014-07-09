@@ -4,7 +4,7 @@ define(function (require) {
     'use strict';
 
     return {
-        footer: require('tpl!templates/footer.tmpl'),
-        header: require('tpl!templates/header.tmpl')
+        footer: require('tpl!templates/footer.html'),
+        header: require('tpl!templates/header.html')
     };
 });

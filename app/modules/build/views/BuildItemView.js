@@ -1,6 +1,6 @@
 define([
     'marionette',
-    'tpl!modules/build/templates/build_item.tmpl'
+    'tpl!modules/build/templates/build_item.html'
 ], function (Marionette, template) {
     'use strict';
 
