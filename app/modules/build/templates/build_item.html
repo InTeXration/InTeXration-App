@@ -1,4 +1,64 @@
-<td><%= buildhook.owner %></td>
-<td><%= buildhook.repo %></td>
-<td><%= buildhook.pusher %></td>
-<td><%= documents[0].name %></td>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-md-3">
+                <strong>Owner</strong>
+            </div>
+            <div class="col-md-3">
+                <%= buildhook.owner %>
+            </div>
+            <div class="col-md-3">
+                <strong>Repository</strong>
+            </div>
+            <div class="col-md-3">
+                <%= buildhook.repo %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <strong>Pusher</strong>
+            </div>
+            <div class="col-md-3">
+                <%= buildhook.pusher %>
+            </div>
+            <div class="col-md-3">
+                <strong>Message</strong>
+            </div>
+            <div class="col-md-3">
+                <%= buildhook.message %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <strong>Timestamp</strong>
+            </div>
+            <div class="col-md-9">
+                <%= buildhook.timestamp %>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+            <tr>
+                <th width="20%">Name</th>
+                <th width="20%">Type</th>
+                <th width="20%">Filename</th>
+                <th width="40%">URL</th>
+            </tr>
+            <thead>
+            <tbody>
+            <% _.each(documents, function(document){ %>
+            <% _.each(document.files, function(file){ %>
+            <tr>
+                <td><%= document.name %></td>
+                <td><%= file.ext %></td>
+                <td><%= file.name %></td>
+                <td><%= file.path %></td>
+            </tr>
+            <% }); %>
+            <% }); %>
+            </tbody>
+        </table>
+    </div>
+</div>

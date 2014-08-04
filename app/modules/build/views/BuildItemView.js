@@ -5,7 +5,7 @@ define([
     'use strict';
 
     return Marionette.ItemView.extend({
-        tagName: 'tr',
+        tagName: 'div',
         template: template
     });
 });

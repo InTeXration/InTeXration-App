@@ -7,7 +7,6 @@ define([
 
     return Marionette.CompositeView.extend({
         template: template,
-        childView: BuildItemView,
-        childViewContainer: 'tbody'
+        childView: BuildItemView
     });
 });
