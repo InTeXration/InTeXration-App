@@ -53,7 +53,7 @@
             <tr>
                 <td><%= document.name %></td>
                 <td><%= file.ext %></td>
-                <td><%= file.name %></td>
+                <td><a href="http://intexration.com/file/<%= buildhook.owner %>/<%= buildhook.repo %>/<%= document.name %>/<%= file.ext %>" target="_blank"><%= file.name %></a></td>
             </tr>
             <% }); %>
             <% }); %>
