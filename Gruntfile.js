@@ -19,26 +19,18 @@ module.exports = function(grunt) {
         config: appConfig,
 
         pkg: grunt.file.readJSON('package.json'),
-
         watch: {
             grunt: { files: ['Gruntfile.js'] },
-
             sass: {
-                files: 'app/scss/**/*.scss',
-                tasks: ['sass']
+                files: 'app/sass/**/*.scss',
+                tasks: ['compass']
             }
         },
-
-        sass: {
-            options: {
-                includePaths: ['app/bower_components/foundation/scss']
-            },
+        compass: {
             dist: {
                 options: {
-                    outputStyle: 'compressed'
-                },
-                files: {
-                    'public/css/app.css': 'app/scss/app.scss'
+                    sassDir: 'app/sass',
+                    cssDir: 'app/css'
                 }
             }
         },
@@ -108,6 +100,7 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -119,6 +112,7 @@ module.exports = function(grunt) {
         grunt.task.run([
             'clean:server',
             'connect:livereload',
+            'compass',
             'open',
             'watch'
         ]);

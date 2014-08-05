@@ -27,7 +27,7 @@ define([
             'modules/build/BuildApp'
         ], function(AppRouter){
             new AppRouter();
-            Backbone.history.start({pushState: true,  root: '/'});
+            Backbone.history.start({pushState: false,  root: '/'});
             NProgress.done();
         });
     });
