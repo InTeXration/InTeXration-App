@@ -22,18 +22,19 @@
                 <%= buildhook.pusher %>
             </div>
             <div class="col-md-3">
-                <strong>Message</strong>
+                <strong>Timestamp</strong>
             </div>
             <div class="col-md-3">
-                <%= buildhook.message %>
+                <%= buildhook.timestamp %>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3">
-                <strong>Timestamp</strong>
+                <strong>Message</strong>
             </div>
             <div class="col-md-9">
-                <%= buildhook.timestamp %>
+                <%= buildhook.message %>
+
             </div>
         </div>
     </div>
@@ -41,10 +42,9 @@
         <table class="table">
             <thead>
             <tr>
-                <th width="20%">Name</th>
+                <th width="40%">Name</th>
                 <th width="20%">Type</th>
-                <th width="20%">Filename</th>
-                <th width="40%">URL</th>
+                <th width="40%">Filename</th>
             </tr>
             <thead>
             <tbody>
@@ -54,7 +54,6 @@
                 <td><%= document.name %></td>
                 <td><%= file.ext %></td>
                 <td><%= file.name %></td>
-                <td><%= file.path %></td>
             </tr>
             <% }); %>
             <% }); %>
